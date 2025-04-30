@@ -1,4 +1,7 @@
 function checkLongitud(longitud) {
+  if (!longitud){
+    return "debe ingresar la longitud"
+  }
   /* TU CODIGO */
 
 }

@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 1440px;
+    height: 861px;
+}
+
+
+#barraNav{
+    display: flex;
+    width: 1440px;
+    height: 89px;
+    background-color: #F1F1F1;
+    position: relative;
+
+}
+
+.logo{
+    width:144.78px ;
+    height: 27px;
+    margin-top: 36px;
+    margin-left: 65px;
+}
+
+.contenedorLista{
+    position: absolute;
+    display: flex;
+    width: 888px;
+    height: 33px;
+    top: 33px;
+    left: 483px;  
+    border-radius: 9px;
+    align-items: center;
+}
+
+.contenedorLista ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.contenedorLista a{
+    font-family:'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    padding: 4px 16px 5px 15px;
+}
+
+.elemento:hover a{
+    background-color: #222222;
+    color: #FFFFFF;
+    border-radius: 9px;
+}
+
+.logoSAS{
+    position: absolute;
+    width: 501.55px;
+    height: 590px;
+    top: 197px;
+    left: 792.45px;
+}
+
+#principal{
+    position: absolute;
+    width: 608px;
+    height: 406px;
+    top: 197px;
+    left: 128px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+h3{
+    border-radius: 23px;
+    background-color: #F1F1F1;
+    font-family:'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 15px 17px 15px 21px;
+    width: fit-content;
+    margin: 0;
+}
+
+h1{
+    font-family:'Satoshi', sans-serif ;
+    font-weight: 900;
+    font-size: 90px;
+    line-height: 87px;
+    margin: 0 ;
+}
+
+.texto{
+    display: flex;
+    align-content: flex-end;
+    color: #676767;
+    width: 478px;
+    height: 64px;
+    font-family: 'Satoshi', sans-serif ;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 32px;
+    margin: 0;
+
+
+}
+
+span{
+    font-family: Satoshi;
+    font-weight: 900;
+    font-size: 90px;
+    line-height: 116px;
+    border-radius: 418px;
+    background-color: #FFFF00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  
+}
