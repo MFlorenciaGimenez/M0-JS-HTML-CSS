@@ -5,9 +5,131 @@
 /*!***********************************************!*\
   !*** ../02. JS Bases/generadorContrasenas.js ***!
   \***********************************************/
-/***/ (() => {
+/***/ ((module) => {
 
-throw new Error("Module parse failed: Unexpected token (18:6)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n|   var caracteresDisponibles = null;\n| \n>   if () {\n|       \n|   }");
+
+function checkLongitud(longitud) {
+  if (!longitud){
+    return "debe ingresar la longitud"
+    }
+     if(typeof longitud!=="string"){
+    return "La longitud recibida no es válida"
+    }
+    if(longitud < 3){
+      return "La longitud debe ser mayor o igual a 3"
+    }
+    if(longitud > 10){
+      return "La longitud debe ser menor o igual a 10"
+    }
+    else return longitud
+  }
+
+
+function generarContrasena(longitud, incluirEspeciales, incluirNumeros, incluirMayusculas ) {
+  
+  var letras = "abcdefghijklmnopqrstuvwxyz";
+
+  var numeros = "0123456789";
+
+  var especiales = "!#$%&'()*+,-./:;{|}~";
+
+  var letrasMayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+  var caracteresDisponibles = letras;
+
+
+  //console.log(longitud)
+  //console.log(incluirEspeciales)
+  //console.log(incluirNumeros)
+  //console.log(incluirMayusculas)
+
+
+
+  if (incluirEspeciales) {
+    caracteresDisponibles= caracteresDisponibles + especiales
+  }
+
+  if (incluirNumeros) {
+    caracteresDisponibles= caracteresDisponibles + numeros
+  }
+
+ if (incluirMayusculas) {
+  caracteresDisponibles= caracteresDisponibles + letrasMayusculas
+  }
+
+ var contrasena = "";
+
+  if (longitud>=3) {
+    var aleatorio= Math.random() * caracteresDisponibles.length
+    var entero= Math.floor(aleatorio)
+    var posicion=caracteresDisponibles.charAt(entero)
+    contrasena= contrasena + posicion
+
+    var aleatorio= Math.random() * caracteresDisponibles.length
+    var entero= Math.floor(aleatorio)
+    var posicion=caracteresDisponibles.charAt(entero)
+    contrasena= contrasena + posicion
+
+    var aleatorio= Math.random() * caracteresDisponibles.length
+    var entero= Math.floor(aleatorio)
+    var posicion=caracteresDisponibles.charAt(entero)
+    contrasena= contrasena + posicion
+ }
+  if(longitud>=4){
+    var aleatorio= Math.random() * caracteresDisponibles.length
+    var entero= Math.floor(aleatorio)
+    var posicion=caracteresDisponibles.charAt(entero)
+    contrasena= contrasena + posicion
+  }
+  if(longitud>=5){
+    var aleatorio= Math.random() * caracteresDisponibles.length
+    var entero= Math.floor(aleatorio)
+    var posicion=caracteresDisponibles.charAt(entero)
+    contrasena= contrasena + posicion
+  }
+  if(longitud>=6){
+    var aleatorio= Math.random() * caracteresDisponibles.length
+    var entero= Math.floor(aleatorio)
+    var posicion=caracteresDisponibles.charAt(entero)
+    contrasena= contrasena + posicion
+  }
+  if(longitud>=7){
+    var aleatorio= Math.random() * caracteresDisponibles.length
+    var entero= Math.floor(aleatorio)
+    var posicion=caracteresDisponibles.charAt(entero)
+    contrasena= contrasena + posicion
+  }
+  if(longitud>=8){
+    var aleatorio= Math.random() * caracteresDisponibles.length
+    var entero= Math.floor(aleatorio)
+    var posicion=caracteresDisponibles.charAt(entero)
+    contrasena= contrasena + posicion
+  }
+  if(longitud>=9){
+    var aleatorio= Math.random() * caracteresDisponibles.length
+    var entero= Math.floor(aleatorio)
+    var posicion=caracteresDisponibles.charAt(entero)
+    contrasena= contrasena + posicion
+  }
+  if(longitud>=10){
+    var aleatorio= Math.random() * caracteresDisponibles.length
+    var entero= Math.floor(aleatorio)
+    var posicion=caracteresDisponibles.charAt(entero)
+    contrasena= contrasena + posicion
+  }
+
+
+
+ return "Contraseña generada: " + contrasena;
+}
+
+
+// <------- NO TOCAR -------->
+module.exports = {
+  checkLongitud,
+  generarContrasena,
+};
+
 
 /***/ }),
 

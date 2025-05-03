@@ -1,44 +1,59 @@
+
 function checkLongitud(longitud) {
   if (!longitud){
     return "debe ingresar la longitud"
+    }
+     if(typeof longitud!=="string"){
+    return "La longitud recibida no es válida"
+    }
+    if(longitud < 3){
+      return "La longitud debe ser mayor o igual a 3"
+    }
+    if(longitud > 10){
+      return "La longitud debe ser menor o igual a 10"
+    }
+    else return longitud
   }
-  /* TU CODIGO */
 
-}
 
 function generarContrasena(longitud, incluirEspeciales, incluirNumeros, incluirMayusculas ) {
-  /* TU CODIGO */
-  var letras = null;
+  
+  var letras = "abcdefghijklmnopqrstuvwxyz";
 
-  var numeros = null;
+  var numeros = "0123456789";
 
-  var especiales = null;
+  var especiales = "!#$%&'()*+,-./:;{|}~";
 
-  var letrasMayusculas = null
+  var letrasMayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-  var caracteresDisponibles = null;
+  var caracteresDisponibles = letras;
 
-  if () {
-      
+
+
+  if (incluirEspeciales) {
+    caracteresDisponibles= caracteresDisponibles + especiales
   }
 
-  if () {
-      
+  if (incluirNumeros) {
+    caracteresDisponibles= caracteresDisponibles + numeros
   }
 
-  if () {
-      
-
+ if (incluirMayusculas) {
+  caracteresDisponibles= caracteresDisponibles + letrasMayusculas
   }
 
-  var contrasena = null;
+ var contrasena = "";
 
-  if () {
-
+  for(let i=0; i< longitud; i++)
+    {
+      var aleatorio= Math.random() * caracteresDisponibles.length
+      var entero= Math.floor(aleatorio)
+      var posicion=caracteresDisponibles.charAt(entero)
+      contrasena= contrasena + posicion
   }
-
-  return null;
+  return "Contraseña generada: " + contrasena;
 }
+
 
 // <------- NO TOCAR -------->
 module.exports = {
